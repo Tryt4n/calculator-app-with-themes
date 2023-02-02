@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/dist/style.css" />
+    <script src="script/theme.js" defer></script>
+    <title>Calculator APP</title>
+  </head>
+  <body>
+    <main>
+      <section class="calc">
+        <div class="header">
+          <div class="labels-wrapper">
+            <label for="dark" data-theme-label>1</label>
+            <label for="default" data-theme-label>2</label>
+            <label for="accent" data-theme-label>3</label>
+          </div>
+          <h1 class="header__title">calc</h1>
+          <div class="theme-wrapper">
+            <p class="theme-wrapper__subtitle">theme</p>
+            <div class="tripple-switcher">
+              <input type="radio" name="theme-switcher" id="dark" data-theme="dark" />
+              <input type="radio" name="theme-switcher" id="default" data-theme="default" />
+              <input type="radio" name="theme-switcher" id="accent" data-theme="accent" />
+            </div>
+          </div>
+        </div>
+
+        <div class="computation">
+          <span class="computation__text"><strong>0</strong></span>
+        </div>
+
+        <div class="keypad">
+          <button class="btn btn--primary">7</button>
+          <button class="btn btn--primary">8</button>
+          <button class="btn btn--primary">9</button>
+          <button class="keypad--text btn btn--primary btn--accent">del</button>
+
+          <button class="btn btn--primary">4</button>
+          <button class="btn btn--primary">5</button>
+          <button class="btn btn--primary">6</button>
+          <button class="btn btn--primary">+</button>
+
+          <button class="btn btn--primary">1</button>
+          <button class="btn btn--primary">2</button>
+          <button class="btn btn--primary">3</button>
+          <button class="btn btn--primary">-</button>
+
+          <button class="btn btn--primary">.</button>
+          <button class="btn btn--primary">0</button>
+          <button class="btn btn--primary">&#247;</button>
+          <button class="btn btn--primary">&#215;</button>
+
+          <button class="keypad--text btn btn--primary btn--accent keypad__col--1-2">reset</button>
+          <button class="btn btn--primary btn--danger keypad__col--3-4">=</button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

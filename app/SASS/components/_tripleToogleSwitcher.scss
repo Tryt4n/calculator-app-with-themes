@@ -1,0 +1,24 @@
+@use "../abstracts/mixins" as *;
+
+.tripple-switcher {
+  width: fit-content;
+  @include clamp(font-size, 1rem);
+  @include clampWithMoreProperties(padding, 0.25rem, 0.5rem);
+  border-radius: 99999px;
+  @include flex(row, center, center);
+
+  input[type="radio"] {
+    appearance: none;
+    @include clamp(height, 1rem);
+    @include clamp(width, 1rem);
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+    transition: 250ms ease-in-out;
+    outline: none;
+  }
+
+  input:checked {
+    cursor: auto;
+  }
+}

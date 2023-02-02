@@ -1,0 +1,7 @@
+@use "../base/functions" as func;
+@use "../abstracts/mixins" as *;
+
+$box-shadow: func.rem(3);
+$box-shadow-height: clamp(calc($box-shadow * 0.6), 2vw, $box-shadow);
+
+$main-transition: 300ms ease-in-out;

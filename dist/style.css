@@ -1,0 +1,316 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
+.tripple-switcher {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: clamp(0.6rem, 2vw, 1rem);
+  transition: 250ms ease-in-out;
+  padding: clamp(0.15rem, 2vw, 0.25rem) clamp(0.3rem, 2vw, 0.5rem) clamp(0.15rem, 2vw, 0.25rem) clamp(0.3rem, 2vw, 0.5rem);
+  transition: 250ms ease-in-out;
+  border-radius: 99999px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.tripple-switcher input[type=radio] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  height: clamp(0.6rem, 2vw, 1rem);
+  transition: 250ms ease-in-out;
+  width: clamp(0.6rem, 2vw, 1rem);
+  transition: 250ms ease-in-out;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  transition: 250ms ease-in-out;
+  outline: none;
+}
+.tripple-switcher input:checked {
+  cursor: auto;
+}
+
+body,
+h1,
+p,
+input {
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+}
+
+.calc {
+  font-size: 2rem;
+}
+
+body.dark {
+  background: #777;
+  transition: 300ms ease-in-out;
+}
+body.dark .tripple-switcher {
+  background: hsl(223deg, 31%, 20%);
+}
+body.dark .visible {
+  background: hsl(6deg, 63%, 60%);
+}
+body.dark input:checked.visible {
+  background: hsl(6deg, 63%, 50%);
+}
+body.dark .invisible {
+  background: transparent;
+}
+body.dark .calc {
+  color: hsl(30deg, 25%, 89%);
+  background: hsl(222deg, 26%, 31%);
+}
+body.dark .computation {
+  background: hsl(224deg, 36%, 15%);
+}
+body.dark .keypad {
+  background: hsl(223deg, 31%, 20%);
+}
+body.dark .btn--primary {
+  background: hsl(30deg, 25%, 89%);
+  box-shadow: 0 clamp(0.1875rem * 0.6, 2vw, 0.1875rem) hsl(28deg, 16%, 65%);
+  color: hsl(221deg, 14%, 31%);
+}
+body.dark .btn--accent {
+  background: hsl(225deg, 21%, 49%);
+  box-shadow: 0 clamp(0.1875rem * 0.6, 2vw, 0.1875rem) hsl(224deg, 28%, 35%);
+  color: hsl(0deg, 0%, 100%);
+}
+body.dark .btn--danger {
+  background: hsl(6deg, 63%, 50%);
+  box-shadow: 0 clamp(0.1875rem * 0.6, 2vw, 0.1875rem) hsl(6deg, 70%, 34%);
+  color: hsl(0deg, 0%, 100%);
+}
+body.dark .btn--primary:where(:hover, :focus):not(body.dark .btn--accent, body.dark .btn--danger) {
+  background: hsl(30deg, 25%, 95%);
+  box-shadow: 0 clamp(0.1875rem * 0.6, 2vw, 0.1875rem) hsla(28deg, 16%, 65%, 0.75);
+}
+body.dark .btn--accent:where(:hover, :focus) {
+  background: hsl(225deg, 21%, 69%);
+  box-shadow: 0 clamp(0.1875rem * 0.6, 2vw, 0.1875rem) hsla(224deg, 28%, 35%, 0.5);
+}
+body.dark .btn--danger:where(:hover, :focus) {
+  background: hsl(6deg, 63%, 60%);
+  box-shadow: 0 clamp(0.1875rem * 0.6, 2vw, 0.1875rem) hsla(6deg, 70%, 34%, 0.5);
+}
+
+body.default {
+  background: hsla(0deg, 0%, 100%, 0.01);
+  transition: 300ms ease-in-out;
+}
+body.default .tripple-switcher {
+  background: hsl(0deg, 5%, 81%);
+}
+body.default .visible {
+  background: hsl(25deg, 98%, 60%);
+}
+body.default input:checked.visible {
+  background: hsl(25deg, 98%, 40%);
+}
+body.default .invisible {
+  background: transparent;
+}
+body.default .calc {
+  color: hsl(60deg, 10%, 19%);
+  background: hsl(0deg, 0%, 90%);
+}
+body.default .computation {
+  background: hsl(0deg, 0%, 93%);
+}
+body.default .keypad {
+  background: hsl(0deg, 5%, 81%);
+}
+body.default .btn--primary {
+  background: hsl(45deg, 7%, 89%);
+  box-shadow: 0 clamp(0.1875rem * 0.6, 2vw, 0.1875rem) hsl(35deg, 11%, 61%);
+  color: hsl(60deg, 10%, 19%);
+}
+body.default .btn--accent {
+  background: hsl(185deg, 42%, 37%);
+  box-shadow: 0 clamp(0.1875rem * 0.6, 2vw, 0.1875rem) hsl(185deg, 58%, 25%);
+  color: hsl(0deg, 0%, 100%);
+}
+body.default .btn--danger {
+  background: hsl(25deg, 98%, 40%);
+  box-shadow: 0 clamp(0.1875rem * 0.6, 2vw, 0.1875rem) hsl(25deg, 99%, 27%);
+  color: hsl(0deg, 0%, 100%);
+}
+body.default .btn--primary:where(:hover, :focus):not(body.default .btn--accent, body.default .btn--danger) {
+  background: hsl(45deg, 7%, 95%);
+  box-shadow: 0 clamp(0.1875rem * 0.6, 2vw, 0.1875rem) hsla(35deg, 11%, 61%, 0.5);
+}
+body.default .btn--accent:where(:hover, :focus) {
+  background: hsl(185deg, 42%, 57%);
+  box-shadow: 0 clamp(0.1875rem * 0.6, 2vw, 0.1875rem) hsla(185deg, 58%, 25%, 0.5);
+}
+body.default .btn--danger:where(:hover, :focus) {
+  background: hsl(25deg, 98%, 60%);
+  box-shadow: 0 clamp(0.1875rem * 0.6, 2vw, 0.1875rem) hsla(25deg, 99%, 27%, 0.5);
+}
+
+body.accent {
+  background: #111;
+  transition: 300ms ease-in-out;
+}
+body.accent .tripple-switcher {
+  background: hsl(268deg, 71%, 12%);
+}
+body.accent .visible {
+  background: hsl(176deg, 100%, 64%);
+}
+body.accent input:checked.visible {
+  background: hsl(176deg, 100%, 44%);
+}
+body.accent .invisible {
+  background: transparent;
+}
+body.accent .calc {
+  color: hsl(52deg, 100%, 62%);
+  background: hsl(268deg, 75%, 9%);
+}
+body.accent .computation {
+  background: hsl(268deg, 71%, 12%);
+}
+body.accent .keypad {
+  background: hsl(268deg, 71%, 12%);
+}
+body.accent .btn--primary {
+  background: hsl(268deg, 47%, 21%);
+  box-shadow: 0 clamp(0.1875rem * 0.6, 2vw, 0.1875rem) hsl(290deg, 70%, 36%);
+  color: hsl(52deg, 100%, 62%);
+}
+body.accent .btn--accent {
+  background: hsl(281deg, 89%, 26%);
+  box-shadow: 0 clamp(0.1875rem * 0.6, 2vw, 0.1875rem) hsl(285deg, 91%, 52%);
+  color: hsl(0deg, 0%, 100%);
+}
+body.accent .btn--danger {
+  background: hsl(176deg, 100%, 44%);
+  box-shadow: 0 clamp(0.1875rem * 0.6, 2vw, 0.1875rem) hsl(177deg, 92%, 70%);
+  color: hsl(198deg, 20%, 13%);
+}
+body.accent .btn--primary:where(:hover, :focus):not(body.accent .btn--accent, body.accent .btn--danger) {
+  background: hsl(268deg, 47%, 41%);
+  box-shadow: 0 clamp(0.1875rem * 0.6, 2vw, 0.1875rem) hsla(290deg, 70%, 36%, 0.5);
+}
+body.accent .btn--accent:where(:hover, :focus) {
+  background: hsl(281deg, 89%, 46%);
+  box-shadow: 0 clamp(0.1875rem * 0.6, 2vw, 0.1875rem) hsla(285deg, 91%, 52%, 0.5);
+}
+body.accent .btn--danger:where(:hover, :focus) {
+  background: hsl(176deg, 100%, 64%);
+  box-shadow: 0 clamp(0.1875rem * 0.6, 2vw, 0.1875rem) hsla(177deg, 92%, 70%, 0.5);
+}
+
+.btn {
+  outline: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: clamp(1.2rem, 2vw, 2rem);
+  transition: 250ms ease-in-out;
+}
+.btn--primary {
+  padding-right: clamp(0.9rem, 2vw, 1.5rem);
+  transition: 250ms ease-in-out;
+  padding-left: clamp(0.9rem, 2vw, 1.5rem);
+  transition: 250ms ease-in-out;
+  padding-top: clamp((0.5rem + clamp(0.1875rem * 0.6, 2vw, 0.1875rem)) * 0.6, 2vw, 0.5rem + clamp(0.1875rem * 0.6, 2vw, 0.1875rem));
+  transition: 250ms ease-in-out;
+  padding-bottom: clamp(0.3rem, 2vw, 0.5rem);
+  transition: 250ms ease-in-out;
+  border-radius: 0.5rem;
+}
+
+.calc {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: clamp(1.8rem, 2vw, 3rem);
+  transition: 250ms ease-in-out;
+}
+.calc .header {
+  position: relative;
+  font-size: clamp(0.6rem, 2vw, 1rem);
+  transition: 250ms ease-in-out;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.calc .header .labels-wrapper {
+  position: absolute;
+  right: 0;
+  translate: clamp(-0.15rem, 2vw, -0.25rem) -150%;
+}
+.calc .header .labels-wrapper label {
+  padding: clamp(0.15rem, 2vw, 0.25rem);
+  transition: 250ms ease-in-out;
+  cursor: pointer;
+}
+.calc .header .theme-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: clamp(0.9rem, 2vw, 1.5rem);
+  transition: 250ms ease-in-out;
+}
+.calc .header .theme-wrapper__subtitle {
+  text-transform: uppercase;
+  font-size: clamp(0.45rem, 2vw, 0.75rem);
+  transition: 250ms ease-in-out;
+}
+.calc .computation {
+  padding: clamp(0.9rem, 2vw, 1.5rem);
+  transition: 250ms ease-in-out;
+  margin-top: clamp(0.9rem, 2vw, 1.5rem);
+  transition: 250ms ease-in-out;
+  margin-bottom: clamp(0.6rem, 2vw, 1rem);
+  transition: 250ms ease-in-out;
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: 0.5rem;
+  text-align: end;
+}
+.calc .keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: clamp(0.6rem, 2vw, 1rem);
+  transition: 250ms ease-in-out;
+  padding: clamp(0.6rem, 2vw, 1rem);
+  transition: 250ms ease-in-out;
+  border-radius: 0.5rem;
+}
+.calc .keypad--text {
+  font-size: clamp(0.6rem, 2vw, 1rem);
+  transition: 250ms ease-in-out;
+}
+.calc .keypad__col--1-2 {
+  grid-column: 1/3;
+}
+.calc .keypad__col--3-4 {
+  grid-column: 3/5;
+}
+.calc .keypad button {
+  text-transform: uppercase;
+  font-weight: bold;
+}/*# sourceMappingURL=style.css.map */

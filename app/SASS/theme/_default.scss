@@ -1,0 +1,70 @@
+@forward "../components/tripleToogleSwitcher";
+
+@use "../abstracts/colors" as c;
+@use "../abstracts/variables" as v;
+
+body.default {
+  background: hsl(0, 0%, 100%, 0.01);
+  transition: v.$main-transition;
+
+  // Theme switcher
+  .tripple-switcher {
+    background: c.$grayish-red;
+  }
+  .visible {
+    background: c.$orange-hover;
+  }
+  input:checked.visible {
+    background: c.$orange;
+  }
+  .invisible {
+    background: transparent;
+  }
+
+  // Calculator
+  .calc {
+    color: c.$very-dark-grayish-yellow;
+    background: c.$light-gray;
+  }
+  .computation {
+    background: c.$very-light-gray;
+  }
+
+  .keypad {
+    background: c.$grayish-red;
+  }
+
+  // Buttons
+  .btn {
+    &--primary {
+      background: c.$light-grayish-yellow;
+      box-shadow: 0 v.$box-shadow-height c.$dark-grayish-orange;
+      color: c.$very-dark-grayish-yellow;
+    }
+
+    &--accent {
+      background: c.$dark-moderate-cyan;
+      box-shadow: 0 v.$box-shadow-height c.$very-dark-cyan;
+      color: c.$white;
+    }
+
+    &--danger {
+      background: c.$orange;
+      box-shadow: 0 v.$box-shadow-height c.$dark-orange;
+      color: c.$white;
+    }
+
+    &--primary:where(:hover, :focus):not(&--accent, &--danger) {
+      background: c.$light-grayish-yellow-hover;
+      box-shadow: 0 v.$box-shadow-height c.$dark-grayish-orange-hover;
+    }
+    &--accent:where(:hover, :focus) {
+      background: c.$dark-moderate-cyan-hover;
+      box-shadow: 0 v.$box-shadow-height c.$very-dark-cyan-hover;
+    }
+    &--danger:where(:hover, :focus) {
+      background: c.$orange-hover;
+      box-shadow: 0 v.$box-shadow-height c.$dark-orange-hover;
+    }
+  }
+}
