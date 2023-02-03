@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/dist/style.css" />
-    <script src="script/theme.js" defer></script>
+    <link rel="stylesheet" href="./dist/style.css" />
+    <script src="script/script.js" type="module"></script>
     <title>Calculator APP</title>
   </head>
   <body>
@@ -29,32 +29,34 @@
         </div>
 
         <div class="computation">
-          <span class="computation__text"><strong>0</strong></span>
+          <span class="computation__text" data-computation-screen><strong></strong></span>
         </div>
 
         <div class="keypad">
-          <button class="btn btn--primary">7</button>
-          <button class="btn btn--primary">8</button>
-          <button class="btn btn--primary">9</button>
-          <button class="keypad--text btn btn--primary btn--accent">del</button>
+          <button class="btn btn--primary" data-btn-digit>7</button>
+          <button class="btn btn--primary" data-btn-digit>8</button>
+          <button class="btn btn--primary" data-btn-digit>9</button>
+          <button class="keypad--text btn btn--primary btn--accent" data-btn-del>del</button>
 
-          <button class="btn btn--primary">4</button>
-          <button class="btn btn--primary">5</button>
-          <button class="btn btn--primary">6</button>
-          <button class="btn btn--primary">+</button>
+          <button class="btn btn--primary" data-btn-digit>4</button>
+          <button class="btn btn--primary" data-btn-digit>5</button>
+          <button class="btn btn--primary" data-btn-digit>6</button>
+          <button class="btn btn--primary" data-btn-operation>+</button>
 
-          <button class="btn btn--primary">1</button>
-          <button class="btn btn--primary">2</button>
-          <button class="btn btn--primary">3</button>
-          <button class="btn btn--primary">-</button>
+          <button class="btn btn--primary" data-btn-digit>1</button>
+          <button class="btn btn--primary" data-btn-digit>2</button>
+          <button class="btn btn--primary" data-btn-digit>3</button>
+          <button class="btn btn--primary" data-btn-operation>-</button>
 
-          <button class="btn btn--primary">.</button>
-          <button class="btn btn--primary">0</button>
-          <button class="btn btn--primary">&#247;</button>
-          <button class="btn btn--primary">&#215;</button>
+          <button class="btn btn--primary" data-btn-comma>.</button>
+          <button class="btn btn--primary" data-btn-digit>0</button>
+          <button class="btn btn--primary" data-btn-operation>/</button>
+          <button class="btn btn--primary" data-btn-operation>*</button>
 
-          <button class="keypad--text btn btn--primary btn--accent keypad__col--1-2">reset</button>
-          <button class="btn btn--primary btn--danger keypad__col--3-4">=</button>
+          <button class="keypad--text btn btn--primary btn--accent keypad__col--1-2" data-btn-reset>
+            reset
+          </button>
+          <button class="btn btn--primary btn--danger keypad__col--3-4" data-btn-equal>=</button>
         </div>
       </section>
     </main>
