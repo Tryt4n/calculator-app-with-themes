@@ -1,5 +1,7 @@
 # Frontend Mentor - Calculator app
 
+[Link to the page](https://calculator-app-with-triple-theme.netlify.app/)
+
 ![Design preview for the Calculator app coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
